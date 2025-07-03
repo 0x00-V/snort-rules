@@ -1,0 +1,18 @@
+# ----------------
+# LOCAL RULES
+# ----------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+# alert tcp any any <> any 80 (msg:"Task 2 - TCP port 80"; sid:1000001; rev:1;)
+# alert tcp any any <> any 21 (msg:"Task 3 - TCP port 21"; sid:1000001; rev:1;)
+# alert tcp any any <> any 21 (msg:"Task 3 - FTP Login Failure"; content:"530 User"; sid:100001; rev:1;)
+# alert tcp any any <> any 21 (msg:"Task 3 - FTP Login Success"; content:"230 User"; sid:100001; rev:1;)
+# alert tcp any 21 <> any any (msg:"Task 3 - FTP No Password"; content:"331 Password"; sid:100001; rev:1;)
+# alert tcp any 21 <> any any (msg:"Task 3 - FTP Admin Login-Bad"; content:"331 Password"; content:"Administrator"; sid:100001; rev:1;)
+# alert tcp any any <> any any (msg:"Task 4 - PNG"; content:"|89 50 4A 47 0D 0A 1A 0A|"; sid:100002; rev:1;)
+# alert tcp any any -> any any (msg:"Task 4 - GIF File"; content:"|47 49 46 38 39 61|";sid:10000000001; rev:1;)
+# alert tcp any any -> any any (msg:"Task 5 - Torrent"; content:".torrent"; nocase;sid:10000000001; rev:1;)
+# alert tcp any any <> any any (msg:"Task 8 - Payload Size"; dsize:770<>885;sid:1000001;rev:1;)
+
+
+

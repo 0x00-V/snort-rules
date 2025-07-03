@@ -1,13 +1,1 @@
-# $Id: local.rules,v 1.11 2004/07/23 20:15:44 bmc Exp $
-# ----------------
-# LOCAL RULES
-# ----------------
-# This file intentionally does not come with signatures.  Put your local
-# additions here.
-# alert icmp any any -> any any (msg:"Alert Triggerd for the IP ID";id:35369;sid:1000001; rev:2;)
-
-# alert tcp any any <> any any (msg:"SYN TRIGGERED THIS!";flags:S;sid:1000002;rev:1;)
-
-#alert tcp any any <> any any (msg:"PSH-ACK TRIGGERED THIS!";flags:PA;sid:1000003;rev:1;)
-
-#alert udp any any <> any any (msg:"UDP traffic TRIGGERED THIS";sameip;sid:1000004;rev:1;)
+alert tcp any any <> any 80 (msg:"Detected TCP:80";sid:1000001;)
