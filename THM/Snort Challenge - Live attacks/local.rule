@@ -1,0 +1,1 @@
+drop tcp any 4444 -> any any (msg:"Suspicious Traffic Detected";sid:1000001;rev:1;)
